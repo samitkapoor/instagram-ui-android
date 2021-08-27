@@ -62,25 +62,29 @@ class _MyAppState extends State<MyApp> {
         ),
         actions: [
           Container(
+            height: 24,
+            width: 24,
             decoration: BoxDecoration(
               color: Theme.of(context).backgroundColor,
-              shape: BoxShape.circle,
-            ),
-            height: 5,
-            child: ClipRRect(
-              child: Icon(
-                FontAwesomeIcons.plusSquare,
-                color: Color.fromRGBO(252, 252, 252, 1),
-                size: 25,
+              image: DecorationImage(
+                image: AssetImage('assets/images/upload.png'),
+                fit: BoxFit.contain,
               ),
             ),
           ),
           SizedBox(
             width: 20,
           ),
-          Icon(
-            FontAwesomeIcons.facebookMessenger,
-            color: Color.fromRGBO(252, 252, 252, 1),
+          Container(
+            height: 24,
+            width: 24,
+            decoration: BoxDecoration(
+              color: Theme.of(context).backgroundColor,
+              image: DecorationImage(
+                image: AssetImage('assets/images/message.png'),
+                fit: BoxFit.contain,
+              ),
+            ),
           ),
           SizedBox(
             width: 10,
@@ -124,11 +128,14 @@ class _MyAppState extends State<MyApp> {
                 updateIndex(2);
               },
               child: Container(
-                height: 50,
-                child: Icon(
-                  Icons.movie,
-                  color: Color.fromRGBO(249, 249, 249, 1),
-                  size: 30,
+                height: 26,
+                width: 26,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).backgroundColor,
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/reel.png'),
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
             ),

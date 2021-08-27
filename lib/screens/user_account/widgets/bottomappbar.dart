@@ -37,11 +37,14 @@ class getBottomAppBar extends StatelessWidget {
           GestureDetector(
             onTap: () {},
             child: Container(
-              height: 50,
-              child: Icon(
-                Icons.movie,
-                color: Colors.white,
-                size: 30,
+              height: 26,
+              width: 26,
+              decoration: BoxDecoration(
+                color: Theme.of(context).backgroundColor,
+                image: DecorationImage(
+                  image: AssetImage('assets/images/reel.png'),
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           ),

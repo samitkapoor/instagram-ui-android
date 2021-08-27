@@ -31,24 +31,29 @@ AppBar getAppBar(BuildContext context) {
     ),
     actions: [
       Container(
+        height: 24,
+        width: 24,
         decoration: BoxDecoration(
           color: Theme.of(context).backgroundColor,
-          shape: BoxShape.circle,
-        ),
-        height: 5,
-        child: ClipRRect(
-          child: Icon(
-            FontAwesomeIcons.plusSquare,
-            color: Colors.white,
-            size: 25,
+          image: DecorationImage(
+            image: AssetImage('assets/images/upload.png'),
+            fit: BoxFit.contain,
           ),
         ),
       ),
       SizedBox(
         width: 20,
       ),
-      Icon(
-        FontAwesomeIcons.gripLines,
+      Container(
+        height: 22,
+        width: 22,
+        decoration: BoxDecoration(
+          color: Theme.of(context).backgroundColor,
+          image: DecorationImage(
+            image: AssetImage('assets/images/lines.jpg'),
+            fit: BoxFit.contain,
+          ),
+        ),
       ),
       SizedBox(
         width: 10,
