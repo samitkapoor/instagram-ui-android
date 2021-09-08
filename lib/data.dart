@@ -166,4 +166,19 @@ class Data {
   var tags = [
     'https://images.unsplash.com/photo-1444210971048-6130cf0c46cf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZnJpZW5kc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
   ];
+
+  var messages = [
+    {
+      'name': 'Jane Doe',
+      'message': 'Sent 1h ago',
+      'image':
+          'https://images.unsplash.com/photo-1604004555489-723a93d6ce74?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+    },
+    {
+      'name': 'Josh',
+      'message': 'Seen 1h ago',
+      'image':
+          'https://images.unsplash.com/photo-1567784177951-6fa58317e16b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fG1hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    },
+  ];
 }
