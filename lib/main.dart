@@ -1,9 +1,12 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import './screens/messages/message.dart';
 import './screens/homescreen/homescreen.dart';
 import './screens/user_account/user_account.dart';
+import './screens/search/search.dart';
 import './screens/login/login.dart';
+import '/components/bottomappbar.dart';
 import './data.dart';
 
 void main() {
@@ -15,6 +18,11 @@ class Instagram extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      routes: {
+        MyApp.routeName: (context) => MyApp(),
+        UserAccount.routeName: (context) => UserAccount(),
+        SearchScreen.routeName: (context) => SearchScreen(),
+      },
       theme: ThemeData(
         primarySwatch: Colors.blue,
         backgroundColor: Colors.black,
@@ -25,22 +33,21 @@ class Instagram extends StatelessWidget {
 }
 
 class MyApp extends StatefulWidget {
+  static const routeName = '/my-app';
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  int index = 0;
-
-  void updateIndex(int val) {
-    setState(() {
-      index = val;
-    });
-  }
-
   PageController controller = PageController(
     initialPage: 0,
   );
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +60,7 @@ class _MyAppState extends State<MyApp> {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             backgroundColor: Theme.of(context).backgroundColor,
-            title: Text(
+            title: const Text(
               'Instagram',
               style: TextStyle(
                 fontFamily: 'Instagram',
@@ -73,7 +80,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               InkWell(
@@ -92,90 +99,13 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
             ],
           ),
           body: HomeScreen(),
-          bottomNavigationBar: BottomAppBar(
-            color: Colors.black,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    updateIndex(0);
-                  },
-                  child: Container(
-                    height: 50,
-                    child: Icon(
-                      Icons.home,
-                      color: Color.fromRGBO(249, 249, 249, 1),
-                      size: 30,
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    updateIndex(1);
-                  },
-                  child: Container(
-                    height: 50,
-                    child: Icon(
-                      Icons.search,
-                      color: Color.fromRGBO(249, 249, 249, 1),
-                      size: 30,
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    updateIndex(2);
-                  },
-                  child: Container(
-                    height: 26,
-                    width: 26,
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).backgroundColor,
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/reel.png'),
-                        fit: BoxFit.contain,
-                      ),
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    updateIndex(3);
-                  },
-                  child: Container(
-                    height: 50,
-                    child: Icon(
-                      Icons.favorite_border_outlined,
-                      color: Color.fromRGBO(249, 249, 249, 1),
-                      size: 30,
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (ctx) => UserAccount(),
-                      ),
-                    );
-                  },
-                  child: CircleAvatar(
-                    radius: 15,
-                    backgroundImage: NetworkImage(
-                      Data().mydetails['image'].toString(),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          bottomNavigationBar: const BottomAppBarWidget(),
         ),
         MessengerScreen(controller),
       ],

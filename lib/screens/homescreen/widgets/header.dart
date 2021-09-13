@@ -12,7 +12,7 @@ class PostHeader extends StatelessWidget {
       color: Colors.transparent,
       child: Row(
         children: [
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           CircleAvatar(
             backgroundColor: Colors.transparent,
             radius: 15,
@@ -20,7 +20,7 @@ class PostHeader extends StatelessWidget {
               val['profileImage'].toString(),
             ),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Text(
             val['username'].toString(),
             style: TextStyle(
@@ -30,12 +30,12 @@ class PostHeader extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Spacer(),
-          Icon(
+          const Spacer(),
+          const Icon(
             Icons.more_vert,
             color: Color.fromRGBO(252, 252, 252, 1),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
         ],
       ),
     );

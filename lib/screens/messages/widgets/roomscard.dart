@@ -6,7 +6,7 @@ class RoomsCard extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Container(
             height: 150,
             width: 150,
@@ -17,7 +17,7 @@ class RoomsCard extends StatelessWidget {
               ),
             ),
           ),
-          Text(
+          const Text(
             'Video chat with anyone',
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -26,27 +26,28 @@ class RoomsCard extends StatelessWidget {
               fontSize: 25,
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             'Share a link to invite anyone to video',
             style: TextStyle(
               color: Color.fromRGBO(121, 121, 121, 1),
               fontSize: 15,
             ),
           ),
-          Text(
+          const Text(
             'chat, even if they don\'t have Instagram.',
             style: TextStyle(
               color: Color.fromRGBO(121, 121, 121, 1),
               fontSize: 15,
             ),
           ),
-          SizedBox(height: 20),
-          Text(
+          const SizedBox(height: 20),
+          const Text(
             'Create Room',
             style: TextStyle(
               color: Color.fromRGBO(49, 129, 190, 1),
-              fontSize: 15,fontFamily: 'FreeSans',
+              fontSize: 15,
+              fontFamily: 'FreeSans',
             ),
           ),
         ],

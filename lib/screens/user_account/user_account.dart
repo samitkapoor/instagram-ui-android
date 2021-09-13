@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-import './widgets/bottomappbar.dart';
 import './widgets/tabview.dart';
+import '/components/bottomappbar.dart';
 import 'functions.dart';
 import '../../data.dart';
 
 class UserAccount extends StatelessWidget {
+  static const routeName = '/useraccount';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +34,7 @@ class UserAccount extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: Text(
@@ -67,7 +68,7 @@ class UserAccount extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: getBottomAppBar(),
+      bottomNavigationBar: const BottomAppBarWidget(),
     );
   }
 }

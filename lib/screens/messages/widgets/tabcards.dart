@@ -11,7 +11,7 @@ class TabCard extends StatelessWidget {
         Container(color: index == number ? Colors.white : Colors.black),
         Container(
           height: 49,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.black,
           ),
           child: Center(

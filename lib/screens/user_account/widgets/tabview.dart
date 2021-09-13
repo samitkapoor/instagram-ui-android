@@ -10,14 +10,14 @@ class getTabBar extends StatelessWidget {
       length: 2,
       child: Scaffold(
         backgroundColor: Colors.black,
-        appBar: TabBar(
-          physics: ScrollPhysics(),
+        appBar: const TabBar(
+          physics: const ScrollPhysics(),
           indicatorColor: Colors.white,
           tabs: [
-            Tab(
+            const Tab(
               child: Icon(Icons.apps_outlined),
             ),
-            Tab(
+            const Tab(
               child: Icon(Icons.account_box_outlined),
             ),
           ],

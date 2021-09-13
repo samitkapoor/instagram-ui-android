@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../data.dart';
+import '/main.dart';
+import '/screens/user_account/user_account.dart';
+import '/screens/search/search.dart';
+import '/data.dart';
 
-class getBottomAppBar extends StatelessWidget {
+class BottomAppBarWidget extends StatelessWidget {
+  const BottomAppBarWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
@@ -12,24 +17,26 @@ class getBottomAppBar extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pop();
+              Navigator.of(context).pushNamed(MyApp.routeName);
             },
             child: Container(
               height: 50,
-              child: Icon(
+              child: const Icon(
                 Icons.home,
-                color: Colors.white,
+                color: Color.fromRGBO(249, 249, 249, 1),
                 size: 30,
               ),
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(SearchScreen.routeName);
+            },
             child: Container(
               height: 50,
-              child: Icon(
+              child: const Icon(
                 Icons.search,
-                color: Colors.white,
+                color: Color.fromRGBO(249, 249, 249, 1),
                 size: 30,
               ),
             ),
@@ -52,15 +59,17 @@ class getBottomAppBar extends StatelessWidget {
             onTap: () {},
             child: Container(
               height: 50,
-              child: Icon(
+              child: const Icon(
                 Icons.favorite_border_outlined,
-                color: Colors.white,
+                color: Color.fromRGBO(249, 249, 249, 1),
                 size: 30,
               ),
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(UserAccount.routeName);
+            },
             child: CircleAvatar(
               radius: 15,
               backgroundImage: NetworkImage(

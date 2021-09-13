@@ -9,22 +9,22 @@ AppBar getAppBar(BuildContext context) {
     backgroundColor: Theme.of(context).backgroundColor,
     title: Row(
       children: [
-        Icon(
+        const Icon(
           FontAwesomeIcons.lock,
           size: 18,
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Text(
           Data().mydetails['username'].toString(),
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 26,
             fontWeight: FontWeight.bold,
             letterSpacing: 1,
             color: Color.fromRGBO(252, 252, 252, 1),
           ),
         ),
-        SizedBox(width: 8),
-        Icon(
+        const SizedBox(width: 8),
+        const Icon(
           Icons.keyboard_arrow_down_rounded,
         ),
       ],
@@ -35,13 +35,13 @@ AppBar getAppBar(BuildContext context) {
         width: 24,
         decoration: BoxDecoration(
           color: Theme.of(context).backgroundColor,
-          image: DecorationImage(
+          image: const DecorationImage(
             image: AssetImage('assets/images/upload.png'),
             fit: BoxFit.contain,
           ),
         ),
       ),
-      SizedBox(
+      const SizedBox(
         width: 20,
       ),
       Container(
@@ -49,13 +49,13 @@ AppBar getAppBar(BuildContext context) {
         width: 22,
         decoration: BoxDecoration(
           color: Theme.of(context).backgroundColor,
-          image: DecorationImage(
+          image: const DecorationImage(
             image: AssetImage('assets/images/lines.jpg'),
             fit: BoxFit.contain,
           ),
         ),
       ),
-      SizedBox(
+      const SizedBox(
         width: 10,
       ),
     ],
@@ -70,7 +70,7 @@ Container getStatsCard(String num, String text) {
       children: [
         Text(
           num,
-          style: TextStyle(
+          style: const TextStyle(
             color: Color.fromRGBO(244, 244, 244, 1),
             fontWeight: FontWeight.bold,
             fontFamily: 'FreeSansBold',
@@ -79,7 +79,7 @@ Container getStatsCard(String num, String text) {
         ),
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Color.fromRGBO(244, 244, 244, 1),
             fontFamily: 'FreeSans',
           ),
@@ -95,7 +95,7 @@ Row getHighlights() {
     children: [
       ...Data().highlights.map((e) {
         return Container(
-          margin: EdgeInsets.fromLTRB(5, 15, 5, 0),
+          margin: const EdgeInsets.fromLTRB(5, 15, 5, 0),
           height: 120,
           width: 75,
           child: Column(
@@ -109,14 +109,14 @@ Row getHighlights() {
                   alignment: Alignment.center,
                   child: Stack(
                     children: [
-                      Align(
+                      const Align(
                         alignment: Alignment.center,
                         child: CircleAvatar(
                           backgroundColor: Color.fromRGBO(102, 102, 102, 1),
                           radius: 35,
                         ),
                       ),
-                      Align(
+                      const Align(
                         alignment: Alignment.center,
                         child: CircleAvatar(
                           backgroundColor: Colors.black,
@@ -137,11 +137,11 @@ Row getHighlights() {
                   ),
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 e['name'].toString(),
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontFamily: 'FreeSans',
                 ),
@@ -151,7 +151,7 @@ Row getHighlights() {
         );
       }).toList(),
       Container(
-        margin: EdgeInsets.fromLTRB(5, 15, 5, 0),
+        margin: const EdgeInsets.fromLTRB(5, 15, 5, 0),
         height: 120,
         width: 75,
         child: Column(
@@ -165,21 +165,21 @@ Row getHighlights() {
                 alignment: Alignment.center,
                 child: Stack(
                   children: [
-                    Align(
+                    const Align(
                       alignment: Alignment.center,
                       child: CircleAvatar(
                         backgroundColor: Color.fromRGBO(197, 197, 197, 1),
                         radius: 35,
                       ),
                     ),
-                    Align(
+                    const Align(
                       alignment: Alignment.center,
                       child: CircleAvatar(
                         backgroundColor: Colors.black,
                         radius: 34,
                       ),
                     ),
-                    Align(
+                    const Align(
                       alignment: Alignment.center,
                       child: CircleAvatar(
                         backgroundColor: Colors.black,
@@ -195,8 +195,8 @@ Row getHighlights() {
                 ),
               ),
             ),
-            SizedBox(height: 5),
-            Text(
+            const SizedBox(height: 5),
+            const Text(
               'New',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -230,7 +230,7 @@ Row getEditProfileButton(BuildContext context) {
             ),
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Align(
+          child: const Align(
             alignment: Alignment.center,
             child: Text(
               'Edit Profile',
@@ -256,7 +256,7 @@ Row getEditProfileButton(BuildContext context) {
             ),
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Align(
+          child: const Align(
             alignment: Alignment.center,
             child: Icon(
               Icons.keyboard_arrow_down,

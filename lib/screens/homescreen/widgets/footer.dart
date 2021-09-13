@@ -10,28 +10,28 @@ class PostFooter extends StatelessWidget {
       color: Colors.transparent,
       child: Row(
         children: [
-          SizedBox(width: 10),
-          Icon(
+          const SizedBox(width: 10),
+          const Icon(
             FontAwesomeIcons.heart,
             color: Colors.white,
           ),
-          SizedBox(width: 15),
-          Icon(
+          const SizedBox(width: 15),
+          const Icon(
             FontAwesomeIcons.comment,
             color: Colors.white,
           ),
-          SizedBox(width: 15),
-          Icon(
+          const SizedBox(width: 15),
+          const Icon(
             FontAwesomeIcons.paperPlane,
             color: Colors.white,
             size: 20,
           ),
-          Spacer(),
-          Icon(
+          const Spacer(),
+          const Icon(
             Icons.bookmark_outline,
             color: Colors.white,
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
         ],
       ),
     );

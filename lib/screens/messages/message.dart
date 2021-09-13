@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '/screens/messages/widgets/searchbar.dart';
+import '../../components/searchbar.dart';
 import '/screens/messages/widgets/tabcards.dart';
 import '/screens/messages/widgets/messagescard.dart';
 import '/screens/messages/widgets/roomscard.dart';
@@ -33,7 +33,7 @@ class _MessengerScreenState extends State<MessengerScreen> {
           onPressed: () {
             widget.controller.jumpToPage(0);
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_sharp,
             color: Colors.white,
           ),
@@ -42,14 +42,14 @@ class _MessengerScreenState extends State<MessengerScreen> {
           children: [
             Text(
               Data().mydetails['username'].toString(),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1,
                 color: Color.fromRGBO(252, 252, 252, 1),
               ),
             ),
-            Icon(
+            const Icon(
               Icons.keyboard_arrow_down,
               color: Colors.white,
             ),
@@ -59,7 +59,7 @@ class _MessengerScreenState extends State<MessengerScreen> {
           Container(
             height: 50,
             width: 100,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/actionbutton.jpg'),
                 fit: BoxFit.cover,
@@ -73,7 +73,9 @@ class _MessengerScreenState extends State<MessengerScreen> {
           children: [
             index == 0
                 ? Center(
-                    child: SearchBar(),
+                    child: SearchBar(
+                      Color.fromRGBO(170, 170, 170, 1),
+                    ),
                   )
                 : Container(),
             Container(

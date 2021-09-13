@@ -16,7 +16,7 @@ class Account extends StatelessWidget {
               Data().mydetails['image'].toString(),
             ),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Text(
             Data().mydetails['username'].toString(),
             style: TextStyle(
@@ -25,7 +25,7 @@ class Account extends StatelessWidget {
               fontSize: 15,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           GestureDetector(
             onTap: () {
               Navigator.of(context).pushReplacement(
@@ -57,8 +57,8 @@ class Account extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 10),
-          Icon(
+          const SizedBox(width: 10),
+          const Icon(
             Icons.more_vert,
             size: 20,
             color: Color.fromRGBO(158, 158, 158, 1),

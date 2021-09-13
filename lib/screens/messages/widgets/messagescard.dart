@@ -6,12 +6,12 @@ class MessagesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: ScrollPhysics(),
+      physics: const ScrollPhysics(),
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 5),
-            margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+            padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 5),
+            margin: const EdgeInsets.fromLTRB(10, 0, 0, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -54,7 +54,7 @@ class MessagesCard extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -74,13 +74,13 @@ class MessagesCard extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Container(
                           margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
                           height: 20,
                           width: 20,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
+                          decoration: const BoxDecoration(
+                            image: const DecorationImage(
                               image: AssetImage('assets/images/camera.jpg'),
                               fit: BoxFit.cover,
                             ),

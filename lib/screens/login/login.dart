@@ -10,7 +10,7 @@ class Login extends StatelessWidget {
       backgroundColor: Colors.black,
       body: ListView(
         children: [
-          Text(
+          const Text(
             'Instagram',
             style: TextStyle(
               color: Color.fromRGBO(248, 248, 248, 1),

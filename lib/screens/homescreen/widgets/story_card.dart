@@ -21,7 +21,7 @@ class StoryCard extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Container(
                     width: 80,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       gradient: LinearGradient(
                         begin: Alignment.topRight,
@@ -44,7 +44,7 @@ class StoryCard extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Container(
                     width: 75,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.black,
                     ),

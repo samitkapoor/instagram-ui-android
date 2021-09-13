@@ -8,7 +8,7 @@ class YourStory extends StatelessWidget {
     return Container(
       width: 80,
       height: 100,
-      margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+      margin: const EdgeInsets.fromLTRB(10, 0, 0, 0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,7 +21,7 @@ class YourStory extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Container(
                     width: 80,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                     ),
                   ),
@@ -30,7 +30,7 @@ class YourStory extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Container(
                     width: 75,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.black,
                     ),
@@ -50,7 +50,7 @@ class YourStory extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   bottom: 6,
                   right: 5,
                   child: CircleAvatar(
@@ -69,7 +69,7 @@ class YourStory extends StatelessWidget {
               ],
             ),
           ),
-          Text(
+          const Text(
             'Your story',
             softWrap: true,
             maxLines: 1,
