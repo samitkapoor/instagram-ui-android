@@ -1,34 +1,63 @@
 import 'package:flutter/material.dart';
+import 'package:sliver_tools/sliver_tools.dart';
 
 import './tags.dart';
 import './uploads.dart';
 
-class getTabBar extends StatelessWidget {
+class getTabBar extends StatefulWidget {
+  @override
+  State<getTabBar> createState() => _getTabBarState();
+}
+
+class _getTabBarState extends State<getTabBar> {
+  int index = 0;
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        backgroundColor: Colors.black,
-        appBar: const TabBar(
-          physics: const ScrollPhysics(),
-          indicatorColor: Colors.white,
-          tabs: [
-            const Tab(
-              child: Icon(Icons.apps_outlined),
+    return MultiSliver(
+      children: [
+        SliverPinnedHeader(
+          child: Container(
+            color: Colors.black,
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Row(
+              children: [
+                Expanded(
+                  child: InkWell(
+                    onTap: () {
+                      setState(() {
+                        index = 0;
+                      });
+                    },
+                    child: Center(
+                      child: Icon(
+                        Icons.apps_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: InkWell(
+                    onTap: () {
+                      setState(() {
+                        index = 1;
+                      });
+                    },
+                    child: Center(
+                      child: Icon(
+                        Icons.account_box_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            const Tab(
-              child: Icon(Icons.account_box_outlined),
-            ),
-          ],
+          ),
         ),
-        body: TabBarView(
-          children: [
-            Uploads(),
-            Tags(),
-          ],
-        ),
-      ),
+        index == 0 ? Uploads() : Tags(),
+      ],
     );
   }
 }
