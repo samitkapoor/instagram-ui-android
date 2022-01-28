@@ -45,7 +45,7 @@ class UserAccount extends StatelessWidget {
                 style: TextStyle(
                   color: Color.fromRGBO(244, 244, 244, 1),
                   fontFamily: 'FreeSans',
-                  fontSize: 16,
+                  fontSize: 15,
                 ),
               ),
             ),
@@ -58,7 +58,7 @@ class UserAccount extends StatelessWidget {
                 style: TextStyle(
                   color: Color.fromRGBO(244, 244, 244, 1),
                   fontFamily: 'FreeSans',
-                  fontSize: 16,
+                  fontSize: 15,
                 ),
               ),
             ),

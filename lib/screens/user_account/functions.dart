@@ -17,8 +17,7 @@ AppBar getAppBar(BuildContext context) {
         Text(
           Data().mydetails['username'].toString(),
           style: const TextStyle(
-            fontSize: 26,
-            fontWeight: FontWeight.bold,
+            fontSize: 24,
             letterSpacing: 1,
             color: Color.fromRGBO(252, 252, 252, 1),
           ),
@@ -95,7 +94,7 @@ Row getHighlights() {
     children: [
       ...Data().highlights.map((e) {
         return Container(
-          margin: const EdgeInsets.fromLTRB(5, 15, 5, 0),
+          margin: const EdgeInsets.fromLTRB(5, 10, 5, 0),
           height: 120,
           width: 75,
           child: Column(
@@ -151,7 +150,7 @@ Row getHighlights() {
         );
       }).toList(),
       Container(
-        margin: const EdgeInsets.fromLTRB(5, 15, 5, 0),
+        margin: const EdgeInsets.fromLTRB(5, 10, 5, 0),
         height: 120,
         width: 75,
         child: Column(
@@ -220,8 +219,8 @@ Row getEditProfileButton(BuildContext context) {
       GestureDetector(
         onTap: () {},
         child: Container(
-          margin: EdgeInsets.fromLTRB(10, 20, 0, 0),
-          height: 40,
+          margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
+          height: 35,
           width: MediaQuery.of(context).size.width - 60,
           decoration: BoxDecoration(
             border: Border.all(
@@ -237,7 +236,7 @@ Row getEditProfileButton(BuildContext context) {
               style: TextStyle(
                 color: Colors.white,
                 fontFamily: 'FreeSans',
-                fontSize: 16,
+                fontSize: 15,
               ),
             ),
           ),
@@ -246,9 +245,9 @@ Row getEditProfileButton(BuildContext context) {
       GestureDetector(
         onTap: () {},
         child: Container(
-          margin: EdgeInsets.fromLTRB(10, 20, 0, 0),
-          height: 40,
-          width: 40,
+          margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
+          height: 35,
+          width: 35,
           decoration: BoxDecoration(
             border: Border.all(
               color: Color.fromRGBO(87, 87, 87, 1),
@@ -261,6 +260,7 @@ Row getEditProfileButton(BuildContext context) {
             child: Icon(
               Icons.keyboard_arrow_down,
               color: Colors.white,
+              size: 20,
             ),
           ),
         ),

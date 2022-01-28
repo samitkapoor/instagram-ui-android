@@ -74,6 +74,7 @@ class StoryCard extends StatelessWidget {
             style: TextStyle(
               fontFamily: 'FreeSans',
               color: Color.fromRGBO(218, 218, 218, 1),
+              fontSize: 14,
             ),
           ),
         ],
