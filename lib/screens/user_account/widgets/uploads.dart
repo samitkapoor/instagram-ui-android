@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../post/post.dart';
 import '../../../data.dart';
 
 class Uploads extends StatelessWidget {
@@ -8,16 +9,26 @@ class Uploads extends StatelessWidget {
     return SliverGrid(
       delegate: SliverChildBuilderDelegate(
         (ctx, index) {
-          return Container(
-            decoration: BoxDecoration(
-              border: Border.all(
+          return GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => PostScreen(index: index),
+                ),
+              );
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.black,
+                ),
+                image: DecorationImage(
+                  image: NetworkImage(
+                      Data().uploads[index]["postImage"].toString()),
+                  fit: BoxFit.cover,
+                ),
                 color: Colors.black,
               ),
-              image: DecorationImage(
-                image: NetworkImage(Data().uploads[index]),
-                fit: BoxFit.contain,
-              ),
-              color: Colors.black,
             ),
           );
         },

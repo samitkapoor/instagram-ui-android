@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './widgets/story_section.dart';
-import './widgets/post_card.dart';
+import '../../components/post_card.dart';
 import '../../data.dart';
 
 class HomeScreen extends StatelessWidget {

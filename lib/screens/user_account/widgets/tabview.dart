@@ -4,6 +4,8 @@ import 'package:sliver_tools/sliver_tools.dart';
 import './tags.dart';
 import './uploads.dart';
 
+// the tab view on the profile page
+// the posted image grid and the tagged posts grid
 class getTabBar extends StatefulWidget {
   @override
   State<getTabBar> createState() => _getTabBarState();

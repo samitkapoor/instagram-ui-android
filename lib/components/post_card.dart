@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import './header.dart';
-import './footer.dart';
+import '../screens/homescreen/widgets/header.dart';
+import '../screens/homescreen/widgets/footer.dart';
 
 class Post extends StatelessWidget {
   var val;
@@ -23,7 +23,7 @@ class Post extends StatelessWidget {
                 image: NetworkImage(
                   val['postImage'].toString(),
                 ),
-                fit: BoxFit.cover,
+                fit: BoxFit.fitHeight,
               ),
             ),
           ),
